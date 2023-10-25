@@ -28,12 +28,11 @@ int main() {
         cout << line << std::endl;
         linesDisplayed++; // นับจำนวนบรรทัด
 
-        if (linesDisplayed == 24)// นับจำนวนบรรทัดจะได้แสดงแค่ 24 บรรทัด
-		{
-            cout << "กด Enter เพื่อดำเนินการต่อ...";
-            cin.get(); //ใช้รับการกด Enter
-            linesDisplayed = 0;
-        }
+       if (linesDisplayed == 24) {
+    cout << "กด Enter เพื่อดำเนินการต่อ...";
+    cin.ignore(); // หรือ cin.get();
+    linesDisplayed = 0;
+}
     }
 
     // ปิดไฟล์
